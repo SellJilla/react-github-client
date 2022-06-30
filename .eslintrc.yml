@@ -20,4 +20,7 @@ rules:
     indent: [2, 2],
     comma-dangle: 0,
     arrow-parens: 0,
+    linebreak-style: 0,
+    semi: 0,
+    eol-last: 0,
   }
