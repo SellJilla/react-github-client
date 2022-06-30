@@ -1,8 +1,17 @@
 import React from 'react'
+import {
+  Routes,
+  Route,
+} from 'react-router-dom';
+import About from './About';
 
 const Content = () => {
   return (
-    <div className='content container-fluid'>Content</div>
+    <Routes>
+      <Route index element={<About />}/>
+      <Route path='/about' element={<About />}/>
+      <Route path='/repositories' element={<About />} />
+    </Routes>
   )
 }
 
