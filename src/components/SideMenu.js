@@ -3,9 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 const SideMenu = () => {
   return (
-    <nav className='nav flex-column'>
-      <NavLink className='nav-link' to="repositories">Repositories</NavLink>
-      <NavLink className='nav-link' to="about">About</NavLink>
+    <nav className='nav nav-tabs nav-pills nav-fill nav-justified flex-column'>
+      <NavLink className='nav-item nav-link' to="repositories">
+        Repositories
+      </NavLink>
+      <NavLink className='nav-item nav-link' to="about">
+        About
+      </NavLink>
     </nav>
   )
 }
