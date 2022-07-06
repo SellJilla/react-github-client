@@ -1,4 +1,6 @@
+import { useDispatch } from 'react-redux'
 import { createSlice } from '@reduxjs/toolkit'
+import {bindActionCreators} from '@reduxjs/toolkit';
 
 const initialState = {
   loading: false,
@@ -18,15 +20,14 @@ const accountSlice = createSlice({
     },
     accountLoadFailed(state, action) {
       state.loading = false
-      console.log(`Failed to load the account - Error: ${action.payload}`)
+      console.log(action.payload)
     }
   }
 })
 
-export const {
-  accountLoading,
-  accountLoaded,
-  accountLoadFailed
-} = accountSlice.actions
+export const useAccountActions = () => {
+  const dispatch = useDispatch();
+  return bindActionCreators(accountSlice.actions, dispatch);
+}
 
 export default accountSlice.reducer
